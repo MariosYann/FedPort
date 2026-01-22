@@ -1,0 +1,108 @@
+
+Application 2026-02-273 FedPort — Open-source service portability toolkit for federated and self-hosted services received
+
+The following submission was recorded by NLnet. Thanks for your application, we look forward to learning more about your proposed project.
+Contact
+
+name
+    Marios Giannoulelis
+phone
+    +306951730354
+email
+    vjisxqykf@mozmail.com
+organisation name
+country
+    Greece
+consent
+    You may keep my data on record
+
+Project
+
+code
+    2026-02-273
+project name
+    FedPort — Open-source service portability toolkit for federated and self-hosted services
+fund
+    Fediversity_Fund
+requested amount
+    € 50000
+website
+
+        https://github.com/MariosYann/FedPort
+
+synopsis
+
+FedPort is an open-source service and data portability toolkit designed to strengthen user control, interoperability, and digital sovereignty within federated and self-hosted internet services. Today, users who rely on online platforms often face strong vendor lock-in, as their data is tightly coupled to specific service providers, making it difficult or risky to migrate to alternative solutions. This lack of portability discourages self-hosting and limits the adoption of open, privacy-respecting services, directly contradicting the vision of a trustworthy and user-centric Next Generation Internet.
+
+The goal of FedPort is to decouple user data from internet-based services by providing a universal, open, and extensible portability layer. The project will deliver a reusable toolkit that enables lawful data export from supported services, transformation into standardised open formats, and reliable import into alternative federated or self-hosted platforms. FedPort will be designed as a modular system with pluggable adapters, allowing support for multiple service types such as federated social platforms, personal storage, and communication services, while remaining extensible by third parties.
+
+The project is expected to run for approximately nine months, which is considered realistic for the proposed scope and level of technical complexity.
+
+experience
+
+I am applying as an individual developer with hands-on experience in open-source software development and self-hosted infrastructure. Over the past years, I have worked independently on designing, deploying, and maintaining Linux-based systems and custom tooling, with a strong focus on automation, reliability, and user control. This work has given me practical exposure to the challenges of operating self-hosted services, including configuration complexity, data ownership, service migration, and long-term maintainability.
+
+My experience includes building small to medium-scale tools and systems that prioritise modular design, clear interfaces, and reproducible workflows. I have frequently worked in environments where data portability, interoperability, and avoidance of vendor lock-in were essential requirements, and I have developed custom scripts and utilities to export, transform, and manage data across different services and deployments. These activities directly inform the technical approach of FedPort, particularly its emphasis on decoupling data from services and providing reusable portability mechanisms.
+
+usage
+
+The requested budget of 50,000 EUR is allocated to cover the research and development activities required to design, implement, validate, and document FedPort as an open-source service and data portability toolkit aligned with the NGI Fediversity objectives. The largest share of the budget is dedicated to core R&D work, including the design of a universal, open data schema, the implementation of the core export, transformation, and import engine, and the development of an initial set of service adapters for federated and self-hosted services. This work involves significant technical design effort to ensure interoperability, data integrity, and long-term reusability, and represents the main innovation contribution of the project.
+
+A dedicated part of the budget is allocated to NixOS packaging and integration in order to ensure that FedPort is fully reproducible, declarative, and compatible with the Fediversity hosting stack. This includes the creation of Nix expressions, reproducible build pipelines, and integration testing within NixOS environments, which are essential to guarantee reliability, maintainability, and ease of deployment for end users.
+
+Additional resources are reserved for testing, validation, and security-related activities. These activities focus on verifying the correctness of data migrations, ensuring confidentiality and integrity of exported and imported data, and validating the robustness of the tool under realistic usage scenarios. This step is critical to ensure that the resulting software can be safely reused by the wider community and integrated into real-world deployments.
+
+The budget also covers the preparation of comprehensive open-access documentation, including developer documentation, usage guides, and example workflows. Clear documentation is essential to enable adoption, reuse, and extension of the project results by other developers and users within the NGI and Fediversity ecosystems, and to ensure the long-term sustainability of the outcomes.
+
+Finally, a limited portion of the budget is allocated to project coordination, reporting, and administrative activities required to ensure timely delivery of milestones, proper communication with the NGI Fediversity programme, and compliance with reporting and dissemination requirements. All project results will be released under a recognised open-source license, ensuring unrestricted access, reuse, and validation in line with NGI principles.
+
+comparison
+
+Existing solutions in the federated and self-hosted ecosystem typically address specific export or migration needs for individual platforms, but none provide a comprehensive, universal approach to service and data portability across multiple service types. Projects such as Mastodon’s built-in data export functionality allow users to retrieve their own posts and basic metadata, but these exports are platform-specific and lack a standardised format that would enable seamless import into alternative services. Similarly, a variety of community tools and scripts exist to assist with specific migration scenarios, such as moving a Mastodon instance from one host to another or converting specific data formats, but these efforts are usually one-off, incomplete, and tightly coupled to a single service’s internal representation.
+
+Historical research and libraries for ActivityPub and other federation protocols provide building blocks for interacting with federated networks, but they do not themselves implement a unified portability layer that can normalise, transform, and migrate data across distinct service categories. Work on broader data portability initiatives, such as the Personal Data Exporter project or platform-specific API-based export utilities, demonstrate the value of user-centric control over data, yet they remain limited in scope, lacking extensibility beyond a narrow set of use cases.
+
+FedPort distinguishes itself from these efforts by addressing the portability challenge at an architectural level and across an expanding set of service types. Instead of being tied to a single service, protocol, or data format, FedPort introduces a universal open data schema that serves as the pivot format for exporting and importing data. This design enables the same toolkit to support multiple federated services, self-hosted storage, communication systems, and other user-centric platforms. Furthermore, FedPort’s modular, adapter-based architecture ensures that support for new services can be added without rewriting the core system, fostering long-term extensibility.
+
+Another unique aspect of FedPort is its focus on reproducibility and integration with the NixOS ecosystem. While existing efforts generally provide scripts or binaries without strong guarantees of environment reproducibility, FedPort will be delivered as a first-class NixOS package with declarative deployment, reproducible builds, and integration testing, reducing operational friction for users and administrators. This approach aligns with the goals of the NGI Fediversity initiative by promoting reliable, user-centric infrastructure as opposed to ad-hoc or proprietary solutions.
+
+In summary, while existing tools and historical projects have addressed fragments of the portability problem within specific platforms or ecosystems, FedPort is positioned as a holistic, extensible, open-source solution that unifies cross-service portability, standardisation, and reproducibility in a way that has not been realised before. This unique positioning directly contributes to the vision of an open, trustworthy, and user-controlled internet.
+
+challenges
+
+A primary technical challenge of the FedPort project is the design of a universal, open data schema that can represent heterogeneous data originating from different types of federated and self-hosted services. Existing platforms expose data through service-specific structures and semantics, often optimised for internal use rather than portability. Mapping these diverse representations into a common, loss-minimising schema while preserving meaning, relationships, and essential metadata requires careful modelling and iterative validation.
+
+Another significant challenge lies in ensuring reliable and lawful data extraction across services with differing APIs, export capabilities, and access constraints. Even when data export is supported, formats, completeness, and consistency vary widely. FedPort must address these inconsistencies through adapter logic that normalises data while remaining robust to partial exports, version differences, and evolving upstream interfaces.
+
+Data integrity and correctness during transformation and re-import represent an additional challenge. The project must ensure that exported data can be re-ingested into alternative services without corruption, duplication, or semantic loss. This requires the development of validation mechanisms, consistency checks, and explicit reporting of transformation limitations so that users retain transparency and control over their data.
+
+Reproducibility and deployment reliability within the NixOS and Fediversity environment also pose technical challenges. Packaging FedPort as a fully reproducible NixOS component involves managing dependencies, build isolation, and deterministic behaviour across environments. Achieving this while supporting extensibility through third-party adapters requires careful separation of core logic and plugin interfaces.
+
+Finally, balancing extensibility with long-term maintainability is a key technical concern. FedPort is designed to support future services beyond those implemented during the project, which necessitates a stable and well-documented adapter interface. Ensuring that this interface remains flexible without becoming overly complex is essential to foster community adoption and avoid fragmentation.
+
+Addressing these challenges is central to the research and development nature of the project and directly contributes to advancing practical, user-centric service portability within the Next Generation Internet ecosystem.
+
+ecosystem
+
+FedPort is embedded primarily within the NixOS and Fediversity ecosystem, which focuses on reproducible, declarative, and user-controlled infrastructure for self-hosted and federated internet services. The core ecosystem actors include NixOS users and administrators, developers maintaining NixOS modules, small hosting providers adopting the Fediversity stack, and open-source contributors working on federated services and supporting infrastructure. These actors already rely on NixOS to manage complexity, ensure reliability, and reduce operational risk, making them a natural audience for a portability toolkit designed to integrate natively with this environment.
+
+Engagement with the ecosystem will be centred on close integration with NixOS workflows and community practices. FedPort will be developed as a first-class NixOS package, with declarative configuration options and reproducible builds, ensuring that it can be easily adopted, evaluated, and extended by NixOS users. Development will take place in public repositories, allowing early feedback from NixOS and Fediversity contributors and enabling collaboration around adapter design, data schemas, and integration patterns.
+
+The project will actively engage with relevant actors through established NixOS and Fediversity communication channels, including issue trackers, developer forums, mailing lists, and community chat platforms. Where appropriate, feedback will be sought from maintainers of federated services to ensure that portability mechanisms align with existing standards and deployment practices commonly used within the NixOS ecosystem.
+
+Promotion of outcomes will focus on practical reuse within the NixOS and Fediversity communities rather than broad commercial dissemination. This includes publishing reusable NixOS modules, documented migration examples, and reproducible configurations demonstrating real-world portability scenarios. Results will also be shared through NGI and Fediversity dissemination channels to reach related projects and contributors working on open, trustworthy internet infrastructure.
+
+By grounding FedPort firmly within the NixOS and Fediversity ecosystem, the project ensures immediate relevance, realistic adoption pathways, and long-term sustainability through community reuse and extension beyond the project lifetime.
+
+pgp
+
+Check
+
+Please check that the above contact details are correct and that any attachments you have included have been uploaded. If you are in doubt, and near a deadline, don't hesitate to resubmit - better safe than sorry. If you want to make changes to the proposal, do the same.
+
+If you experience any technical problems, please contact the webmaster.
+I checked the box but did not receive an email
+
+Besides the obvious candidate for undelivered email (check your spam folder if you have it), some people run into their own outdated email configuration. Do you use a legacy forwarding mechanism for your mail, from me@example.com to theactualmailbox@another.example.org? In that case, the final mailserver may toss these out due the use of modern anti-spoofing techniques (notably DMARC, DKIM and SPF) at our side. Essentially, forwarding the original email as was done historically means that you can't satisfy the origin and integrity conditions - and thus our email to you will be discarded...
+
+The structural solution is to do the forwarding with a mechanism like Sender Rewriting Scheme. Ask your service provider, or consult the documentation of your software how to do that.
